@@ -1,0 +1,32 @@
+<h1>Row: {{row}}</h1>
+<h1>Column: {{col}}</h1>
+
+<table id="myTable" border="1">
+  
+</table>
+
+<ul class="people_list">
+  {{#each people}}
+    <li>{{this}}</li>
+  {{/each}}
+  <li>abc</li>
+</ul>
+
+
+
+<script>
+	
+	
+	let val = {{row}}+{{col}}
+	for(let r=0;r< {{row}};r++)
+	{
+		let x=document.getElementById('myTable').insertRow(r);
+		for(let c=0;c<{{col}};c++)  
+		{
+		let y= x.insertCell(c);
+		y.innerHTML=val; 
+		}
+	}
+	
+	
+</script>
